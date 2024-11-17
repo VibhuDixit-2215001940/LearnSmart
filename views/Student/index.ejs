@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>/* styles.css */
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #fff7e6; /* Soft cream background for warmth */
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #d35400; /* Warm orange */
+  color: #fff;
+  width: 20%;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f5cba7; /* Light orange for text contrast */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  background-color: #e67e22; /* Softer orange for items */
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.sidebar ul li:hover {
+  background-color: #f39c12; /* Highlight on hover */
+}
+
+/* Main Content */
+.main-content {
+  background-color: #fff8f0; /* Very light peach for main content */
+  width: 80%;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  color: #d35400; /* Matches sidebar for consistency */
+}
+
+/* Sections */
+.stats, .courses, .teachers, .gamification {
+  margin-bottom: 20px;
+}
+
+h2 {
+  border-bottom: 2px solid #f39c12; /* Warm orange border */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #d35400;
+}
+
+/* Cards */
+.stat-card, .gamification-card, ul li {
+  background: #fce5cd; /* Light peach background for cards */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card p, .gamification-card p {
+  color: #b03a2e; /* Deep red for emphasis */
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #f4d03f; /* Soft yellow for the bar background */
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.progress {
+  background: #e74c3c; /* Warm red for progress fill */
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #f8c471; /* Muted warm orange */
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #873600; /* Deep warm brown for text */
+}
+
+/* Gamification Section */
+.gamification-card {
+  background: #fad7a0; /* Light gold */
+}
+
+.gamification-card strong {
+  color: #af601a; /* Rich warm gold */
+}
+
+    </style>
+
+    <script>
+        // script.js
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Dashboard is ready!");
+  // Add interactivity here, if needed (e.g., dynamic data loading or toggling sections)
+});
+
+    </script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li>Statistics</li>
+        <li>Courses Enrolled</li>
+        <li>Teachers Enrolled</li>
+        <li>Rewards</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>Welcome, <%= user.username %> !</h1>
+      </header>
+
+      <!-- Statistics Section -->
+      <section class="stats">
+        <h2>Statistics</h2>
+        <div class="stat-card">
+          <p>Total Courses: <strong>5</strong></p>
+          <p>Completed: <strong>3</strong></p>
+          <p>In Progress: <strong>2</strong></p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Enrolled Section -->
+      <section class="courses">
+        <h2>Courses Enrolled</h2>
+        <ul>
+          <li>Course 1</li>
+          <li>Course 2</li>
+          <li>Course 3</li>
+          <li>Course 4</li>
+          <li>Course 5</li>
+        </ul>
+      </section>
+
+      <!-- Teachers Enrolled Section -->
+      <section class="teachers">
+        <h2>Teachers Enrolled</h2>
+        <ul>
+          <li>Teacher A</li>
+          <li>Teacher B</li>
+          <li>Teacher C</li>
+        </ul>
+      </section>
+
+      <!-- Gamification Section -->
+      <section class="gamification">
+        <h2>Gamification</h2>
+        <div class="gamification-card">
+          <p>Points Earned: <strong>1200</strong></p>
+          <p>Badges Collected: <strong>5</strong></p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
