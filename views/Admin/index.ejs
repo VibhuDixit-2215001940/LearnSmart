@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructor Admin Panel</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>/* Reset */
+  /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #4a2e2e;
+  display: flex;
+  min-height: 100vh;
+  background-color: #fceae1; /* Warm beige background */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #d35400; /* Warm orange */
+  color: #fff;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffe6d1; /* Soft warm white */
+}
+
+.sidebar nav a {
+  display: block;
+  color: #ffe6d1; /* Soft warm white */
+  padding: 10px 15px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+  background-color: #e67e22; /* Lighter orange for hover */
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f5b041; /* Light warm yellow for border */
+}
+
+.header h1 {
+  font-size: 28px;
+  color: #d35400; /* Matching sidebar color */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile span {
+  margin-right: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #f5b041; /* Matches border for consistency */
+}
+
+/* Dashboard Content */
+.content-section {
+  margin-top: 20px;
+}
+
+.content-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #c0392b; /* Warm red for headers */
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffe6d1; /* Light warm background for cards */
+  padding: 20px;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(204, 119, 34, 0.2); /* Warm shadow */
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #c0392b; /* Matches header color */
+}
+
+.card p {
+  font-size: 24px;
+  color: #4a2e2e;
+}
+
+   </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>LearnSmart</h2>
+    <nav>
+      <a href="#dashboard" class="active">Dashboard</a>
+      <a href="#course-management">Courses</a>
+      <a href="#student-management">Students</a>
+      <a href="http://192.168.1.5:3001">Video call</a>
+      <a href="#assessments">Assessments</a>
+      <a href="#announcements">Announcements</a>
+      <a href="#settings">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <header class="header">
+      <h1>Instructor Dashboard</h1>
+      <div class="profile">
+        <span>Welcome, Instructor</span>
+        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <section id="dashboard" class="content-section">
+      <h2>Overview</h2>
+      <div class="stats">
+        <div class="card">
+          <h3>Total Students</h3>
+          <p>250</p>
+        </div>
+        <div class="card">
+          <h3>Active Courses</h3>
+          <p>12</p>
+        </div>
+        <div class="card">
+          <h3>Average Progress</h3>
+          <p>75%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Sections (Course Management, Student Management, etc.) would go here -->
+
+  </div>
+</body>
+</html>
