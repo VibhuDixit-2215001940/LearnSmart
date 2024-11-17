@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Phenomena Chatbot</title>
+  <link rel="stylesheet" href="/css/chatbot.css">
+</head>
+<body>
+
+  <!-- Button to open the chatbot -->
+  <button id="openChatButton" class="open-chat-btn">Chat with Bot</button>
+
+  <!-- The Chatbot Modal -->
+  <div id="chatbotModal" class="chatbot-modal">
+    <div class="chatbox">
+      <div id="chat-history" class="chat-history"></div>
+      <div class="user-input">
+        <input type="text" id="user-message" placeholder="Ask about natural phenomena..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+      <button id="closeChatButton" class="close-chat-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="/js/chatbot.js"></script>
+</body>
+</html>
