@@ -4,127 +4,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instructor Admin Panel</title>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-  <style>/* Reset */
-  /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  color: #4a2e2e;
-  display: flex;
-  min-height: 100vh;
-  background-color: #fceae1; /* Warm beige background */
-}
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #4a2e2e;
+      display: flex;
+      min-height: 100vh;
+      background-color: #fceae1; /* Warm beige background */
+    }
 
-/* Sidebar */
-.sidebar {
-  background-color: #d35400; /* Warm orange */
-  color: #fff;
-  width: 250px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
+    /* Sidebar */
+    .sidebar {
+      background-color: #d35400; /* Warm orange */
+      color: #fff;
+      width: 250px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
 
-.sidebar h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #ffe6d1; /* Soft warm white */
-}
+    .sidebar h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #ffe6d1; /* Soft warm white */
+    }
 
-.sidebar nav a {
-  display: block;
-  color: #ffe6d1; /* Soft warm white */
-  padding: 10px 15px;
-  text-decoration: none;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
+    .sidebar nav a {
+      display: block;
+      color: #ffe6d1; /* Soft warm white */
+      padding: 10px 15px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
 
-.sidebar nav a:hover, .sidebar nav a.active {
-  background-color: #e67e22; /* Lighter orange for hover */
-  color: #fff;
-}
+    .sidebar nav a:hover, .sidebar nav a.active {
+      background-color: #e67e22; /* Lighter orange for hover */
+      color: #fff;
+    }
 
-/* Main Content */
-.main-content {
-  flex: 1;
-  padding: 20px;
-}
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #f5b041; /* Light warm yellow for border */
-}
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f5b041; /* Light warm yellow for border */
+    }
 
-.header h1 {
-  font-size: 28px;
-  color: #d35400; /* Matching sidebar color */
-}
+    .header h1 {
+      font-size: 28px;
+      color: #d35400; /* Matching sidebar color */
+    }
 
-.profile {
-  display: flex;
-  align-items: center;
-}
+    .profile {
+      display: flex;
+      align-items: center;
+    }
 
-.profile span {
-  margin-right: 10px;
-}
+    .profile span {
+      margin-right: 10px;
+    }
 
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #f5b041; /* Matches border for consistency */
-}
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #f5b041; /* Matches border for consistency */
+    }
 
-/* Dashboard Content */
-.content-section {
-  margin-top: 20px;
-}
+    /* Dashboard Content */
+    .content-section {
+      margin-top: 20px;
+    }
 
-.content-section h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #c0392b; /* Warm red for headers */
-}
+    .content-section h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #c0392b; /* Warm red for headers */
+    }
 
-.stats {
-  display: flex;
-  gap: 20px;
-}
+    .stats {
+      display: flex;
+      gap: 20px;
+    }
 
-.card {
-  background-color: #ffe6d1; /* Light warm background for cards */
-  padding: 20px;
-  border-radius: 8px;
-  width: 150px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(204, 119, 34, 0.2); /* Warm shadow */
-}
+    .card {
+      background-color: #ffe6d1; /* Light warm background for cards */
+      padding: 20px;
+      border-radius: 8px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(204, 119, 34, 0.2); /* Warm shadow */
+    }
 
-.card h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #c0392b; /* Matches header color */
-}
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #c0392b; /* Matches header color */
+    }
 
-.card p {
-  font-size: 24px;
-  color: #4a2e2e;
-}
+    .card p {
+      font-size: 24px;
+      color: #4a2e2e;
+    }
 
-   </style>
+    /* Form Styles */
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(204, 119, 34, 0.2); /* Warm shadow */
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    form h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #c0392b; /* Warm red for headers */
+    }
+
+    form label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #4a2e2e; /* Dark brown color for labels */
+    }
+
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      border: 2px solid #e67e22; /* Light orange for border */
+      border-radius: 6px;
+      transition: border 0.3s ease;
+    }
+
+    form input[type="text"]:focus,
+    form textarea:focus {
+      border-color: #d35400; /* Darker orange for focus */
+    }
+
+    form button {
+      background-color: #d35400; /* Warm orange for the button */
+      color: #fff;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #e67e22; /* Lighter orange on hover */
+    }
+
+    form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    form .form-section {
+      margin-bottom: 25px;
+    }
+
+    form .form-section input,
+    form .form-section textarea {
+      border-color: #d35400;
+    }
+
+    form .form-section input:focus,
+    form .form-section textarea:focus {
+      border-color: #c0392b;
+    }
+  </style>
 </head>
 <body>
   <!-- Sidebar -->
@@ -132,9 +203,11 @@ body {
     <h2>LearnSmart</h2>
     <nav>
       <a href="#dashboard" class="active">Dashboard</a>
-      <a href="#course-management">Courses</a>
+      <!-- In the sidebar -->
+<a href="#" id="addedCoursesLink">Added Courses</a>
+
       <a href="#student-management">Students</a>
-      <a href="http://192.168.1.5:3001">Video call</a>
+      <a href="/video">Video call</a>
       <a href="#assessments">Assessments</a>
       <a href="#announcements">Announcements</a>
       <a href="#settings">Settings</a>
@@ -171,7 +244,76 @@ body {
       </div>
     </section>
 
-    <!-- Additional Sections (Course Management, Student Management, etc.) would go here -->
+    <!-- Add Course and Quiz Form -->
+    <section id="course-management" class="content-section">
+      <h3>Add New Course and Quiz</h3>
+      <form action="/add-course" method="POST">
+        <div class="form-section">
+          <label for="course-name">Course Name</label>
+          <input type="text" id="course-name" name="courseName" placeholder="Enter course name" required>
+        </div>
+        <div class="form-section">
+          <label for="course-link">Course Link</label>
+          <input type="text" id="course-link" name="courseLink" placeholder="Enter course link" required>
+        </div>
+        <div class="form-section">
+          <label for="quiz-name">Quiz Name</label>
+          <input type="text" id="quiz-name" name="quizName" placeholder="Enter quiz name" required>
+        </div>
+        <div class="form-section">
+          <label for="quiz-link">Quiz Link</label>
+          <input type="text" id="quiz-link" name="quizLink" placeholder="Enter quiz link" required>
+        </div>
+        <button type="submit">Add Course & Quiz</button>
+      </form>
+    </section>
+    <section id="added-courses" class="content-section">
+      <h2>Added Courses</h2>
+      <div id="courseList">
+        <% if (course && course.length > 0) { %>
+          <% course.forEach(function(courseItem) { %>
+            <div class="course">
+              <h1>Course Name: <%= courseItem.name %></h1>
+              <h1>
+                Course Link: 
+                <a href="<%= courseItem.link %>" target="_blank">Click here</a>
+              </h1>
+            </div>
+          <% }); %>
+        <% } else { %>
+          <p>No courses available.</p>
+        <% } %>
+      </div>
+    </section>
+    
+  
+    
+    
+
+<!-- Style for the pop-up -->
+<style>
+  .course-item {
+  background-color: #ffe6d1; /* Light warm background for the course */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(204, 119, 34, 0.2); /* Warm shadow */
+}
+
+.course-item h4 {
+  color: #c0392b; /* Warm red for course name */
+}
+
+.course-item a {
+  color: #d35400; /* Warm orange for links */
+  text-decoration: none;
+}
+
+.course-item a:hover {
+  text-decoration: underline;
+}
+
+</style>
 
   </div>
 </body>
