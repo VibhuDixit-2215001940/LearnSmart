@@ -9,6 +9,7 @@ const courseRoutes = require('./routes/course');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const quizRoutes = require('./routes/quiz');
 
 app.use(session({
     secret: 'your_secret_key',
@@ -36,6 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req,res)=>{
     res.render('Home/index.ejs')
 })
+app.use(quizRoutes)
 app.get('*', (req, res) => {
     res.render('404/index');
 });
