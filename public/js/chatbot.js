@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // script.js
 
+=======
+>>>>>>> 4580008 (change chatbot)
 const chatHistory = document.getElementById("chat-history");
 const userInput = document.getElementById("user-message");
 const openChatButton = document.getElementById("openChatButton");
@@ -7,6 +10,7 @@ const closeChatButton = document.getElementById("closeChatButton");
 const chatbotModal = document.getElementById("chatbotModal");
 
 const botResponses = {
+<<<<<<< HEAD
   "weather": "Weather phenomena include things like thunderstorms, hurricanes, tornadoes, and blizzards. These are caused by changes in temperature, pressure, and moisture in the atmosphere.",
   "earthquake": "Earthquakes occur due to the movement of tectonic plates beneath the Earth's surface. When plates shift suddenly, they release energy, which causes the ground to shake.",
   "volcanic eruption": "A volcanic eruption happens when magma from beneath the Earth's crust escapes to the surface, often causing lava flows, ash clouds, and pyroclastic flows.",
@@ -14,6 +18,15 @@ const botResponses = {
   "eclipse": "An eclipse happens when one celestial body, such as the Moon, passes in front of another celestial body, like the Sun, causing a shadow to be cast. This can be a solar or lunar eclipse.",
   "meteor shower": "Meteor showers occur when Earth passes through the debris left by a comet. As the debris enters the Earth's atmosphere, it burns up, creating bright streaks of light known as meteors.",
   "tornado": "Tornadoes are violent windstorms that are characterized by a rotating column of air that extends from a thunderstorm to the ground. They can cause significant damage due to high winds."
+=======
+  "math": "Math is the study of numbers, shapes, and patterns. Need help with Algebra, Geometry, or Calculus?",
+  "science": "Science is the study of the natural world through observation and experiments. Ask about Biology, Physics, or Chemistry.",
+  "history": "History explores past events, cultures, and civilizations. Need help with ancient, medieval, or modern history?",
+  "algebra": "Algebra involves solving equations using symbols and letters. Do you need help solving linear equations?",
+  "biology": "Biology is the study of life and living organisms. Ask about cells, genetics, or ecosystems.",
+  "physics": "Physics is the study of matter, energy, and forces. Need help with motion, energy, or waves?",
+  "chemistry": "Chemistry studies substances and how they interact. Do you want to learn about the periodic table or chemical reactions?"
+>>>>>>> 4580008 (change chatbot)
 };
 
 function appendMessage(text, sender) {
@@ -21,7 +34,11 @@ function appendMessage(text, sender) {
   messageDiv.classList.add("message", sender);
   messageDiv.innerText = text;
   chatHistory.appendChild(messageDiv);
+<<<<<<< HEAD
   chatHistory.scrollTop = chatHistory.scrollHeight; // Scroll to bottom
+=======
+  chatHistory.scrollTop = chatHistory.scrollHeight;
+>>>>>>> 4580008 (change chatbot)
 }
 
 function sendMessage() {
@@ -34,6 +51,7 @@ function sendMessage() {
 }
 
 function processUserMessage(message) {
+<<<<<<< HEAD
   if (message.includes("weather")) {
     appendMessage(botResponses.weather, "bot");
   } else if (message.includes("earthquake")) {
@@ -57,6 +75,34 @@ function processUserMessage(message) {
 appendMessage("Hello! Ask me about natural phenomena like weather, earthquakes, volcanoes, tsunamis, eclipses, meteor showers, and tornadoes.", "bot");
 
 // Show the chatbot modal when the "Chat with Bot" button is clicked
+=======
+  if (message.includes("math")) {
+    appendMessage(botResponses.math, "bot");
+  } else if (message.includes("science")) {
+    appendMessage(botResponses.science, "bot");
+  } else if (message.includes("history")) {
+    appendMessage(botResponses.history, "bot");
+  } else if (message.includes("algebra")) {
+    appendMessage(botResponses.algebra, "bot");
+  } else if (message.includes("biology")) {
+    appendMessage(botResponses.biology, "bot");
+  } else if (message.includes("physics")) {
+    appendMessage(botResponses.physics, "bot");
+  } else if (message.includes("chemistry")) {
+    appendMessage(botResponses.chemistry, "bot");
+  } else {
+    appendMessage(
+      "Sorry, I don't have information on that topic. Please ask about Math, Science, or History.",
+      "bot"
+    );
+  }
+}
+
+// Initial bot greeting
+appendMessage("Hi! I'm EduBot, your study assistant. Ask me about Math, Science, or History!", "bot");
+
+// Show the chatbot modal when the "Ask EduBot" button is clicked
+>>>>>>> 4580008 (change chatbot)
 openChatButton.addEventListener("click", function() {
   chatbotModal.style.display = "flex"; // Show the modal
 });
@@ -71,4 +117,8 @@ userInput.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     sendMessage();
   }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 4580008 (change chatbot)
