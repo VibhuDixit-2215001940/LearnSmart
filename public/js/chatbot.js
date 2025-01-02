@@ -10,15 +10,6 @@ const closeChatButton = document.getElementById("closeChatButton");
 const chatbotModal = document.getElementById("chatbotModal");
 
 const botResponses = {
-<<<<<<< HEAD
-  "weather": "Weather phenomena include things like thunderstorms, hurricanes, tornadoes, and blizzards. These are caused by changes in temperature, pressure, and moisture in the atmosphere.",
-  "earthquake": "Earthquakes occur due to the movement of tectonic plates beneath the Earth's surface. When plates shift suddenly, they release energy, which causes the ground to shake.",
-  "volcanic eruption": "A volcanic eruption happens when magma from beneath the Earth's crust escapes to the surface, often causing lava flows, ash clouds, and pyroclastic flows.",
-  "tsunami": "Tsunamis are large ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides. They can travel great distances across oceans, causing destruction when they reach coastal areas.",
-  "eclipse": "An eclipse happens when one celestial body, such as the Moon, passes in front of another celestial body, like the Sun, causing a shadow to be cast. This can be a solar or lunar eclipse.",
-  "meteor shower": "Meteor showers occur when Earth passes through the debris left by a comet. As the debris enters the Earth's atmosphere, it burns up, creating bright streaks of light known as meteors.",
-  "tornado": "Tornadoes are violent windstorms that are characterized by a rotating column of air that extends from a thunderstorm to the ground. They can cause significant damage due to high winds."
-=======
   "math": "Math is the study of numbers, shapes, and patterns. Need help with Algebra, Geometry, or Calculus?",
   "science": "Science is the study of the natural world through observation and experiments. Ask about Biology, Physics, or Chemistry.",
   "history": "History explores past events, cultures, and civilizations. Need help with ancient, medieval, or modern history?",
