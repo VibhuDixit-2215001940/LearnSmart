@@ -29,7 +29,7 @@ app.use(adminRoutes)
 app.use(courseRoutes)
 
 const dbUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/learnSmart';
-mongoose.connect(dbUrl, {})
+mongoose.connect(dbUrl, { dbName: 'learnSmart' })
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err));
 
