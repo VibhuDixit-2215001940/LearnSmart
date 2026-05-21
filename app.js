@@ -28,7 +28,8 @@ app.use(chatbotRoutes)
 app.use(adminRoutes)
 app.use(courseRoutes)
 
-mongoose.connect('mongodb://localhost:27017/learnSmart', {})
+const dbUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/learnSmart';
+mongoose.connect(dbUrl, {})
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err));
 
@@ -44,6 +45,7 @@ app.get('*', (req, res) => {
 app.get('/Err', (req, res) => {
     res.render('404/index');
 });
-app.listen(8000,()=>{
-    console.log('listening on port 8000');
-})
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+    console.log(`listening on port ${port}`);
+});
