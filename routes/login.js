@@ -35,6 +35,7 @@ router.post('/login', async (req, res) => {
         req.session.userImage = user.image;
         res.redirect('/Student');
     } catch (err) {
+        console.error('Login Error:', err);
         return res.render('Login/index', { error: 'Database connection failed. Please try again later.' });
     }
 });
@@ -57,6 +58,7 @@ router.post('/register', async (req, res) => {
         await newUser.save();
         res.render('Login/index', { success: 'Registration successful! Please log in.' });
     } catch (err) {
+        console.error('Registration Error:', err);
         return res.render('Login/index', { error: 'Registration failed. Database error.' });
     }
 });
