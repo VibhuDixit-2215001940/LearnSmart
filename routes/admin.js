@@ -8,13 +8,17 @@ router.get('/Adminlogin', (req, res) => {
 });
 
 router.post('/Adminlogin',async (req, res) => {
-    const { Username, Password } = req.body;
-    if (Username === 'admin' && Password === 'admin') {
-        const userCount = await User.countDocuments();
-        const course = await Course.find();
-        return res.render('Admin/index',{userCount,course});
-    } else {
-        res.redirect('/Err')
+    try {
+        const { Username, Password } = req.body;
+        if (Username === 'admin' && Password === 'admin') {
+            const userCount = await User.countDocuments();
+            const course = await Course.find();
+            return res.render('Admin/index',{userCount,course});
+        } else {
+            res.redirect('/Err');
+        }
+    } catch (err) {
+        res.redirect('/Err');
     }
 });
 

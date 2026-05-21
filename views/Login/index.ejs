@@ -29,6 +29,8 @@
         
         <!-- Login Form -->
         <form id="login" class="input-group" action="/login" method="POST">
+            <% if (typeof error !== 'undefined') { %><p style="color:red; text-align:center;"><%= error %></p><% } %>
+            <% if (typeof success !== 'undefined') { %><p style="color:green; text-align:center;"><%= success %></p><% } %>
             <div class="inp">
                 <img src="/images/icon/user.png">
                 <input type="text" name="username" class="input-field" placeholder="Username" required>

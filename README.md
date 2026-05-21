@@ -210,8 +210,8 @@ A big thank you to the following technologies and services that made this projec
 
 Follow our journey and stay updated with new features:
 
-- **GitHub**: [@DeepakPal](https://github.com/DeepakPal)
-- **Portfolio**: [DeepakPal.dev](https://deepakportfolioo.netlify.app/)
-- **LinkedIn**: [Deepak Pal](https://www.linkedin.com/in/deepak-pal/)
+- **GitHub**: [@VibhuDixit]()
+- **Portfolio**: [VibhuDixit.dev]()
+- **LinkedIn**: [Vibhu Dixit]()
 
 Thanks for checking out LearnSmart! We hope it enhances your learning experience! 🚀
